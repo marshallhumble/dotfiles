@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/marshall/.oh-my-zsh
+export ZSH=/Users/marshallhumble/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -50,17 +50,17 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(github colorize thefuck)
+plugins=(github colorize)
 
 # User configuration
 
-export PATH="/Users/marshall/.sdkman/candidates/groovy/current/bin:/Users/marshall/.sdkman/candidates/gradle/current/bin:/Users/marshall/anaconda/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/opt/ruby193/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export PATH="/Users/marshallhumble/.sdkman/candidates/groovy/current/bin:/Users/marshallhumble/.sdkman/candidates/gradle/current/bin:/Users/marshallhumble/anaconda/bin:/usr/local/opt/ruby193/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -86,16 +86,17 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 DEFAULT_USER="$USER"
 export GREP_OPTIONS="--color=auto"
-export GROOVY_HOME="/Users/marshall/.sdkman/candidates/groovy/current"
-export GRADLE_HOME="/Users/marshall/.sdkman/candidates/gradle/current"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home"
-export CLASSPATH="/Library/Java/Extensions:/Users/marshall/Library/Java/Extensions:$CLASSPATH"
-# Setting PATH for Python 3.4
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
-export PATH
-# added by Anaconda3 2.4.0 installer
-export PATH="/Users/marshall/anaconda/bin:$PATH"
+export GRADLE_HOME="/Users/marshallhumble/.sdkman/candidates/gradle/current"
+export GROOVY_HOME="/Users/marshallhumble/.sdkman/candidates/groovy/current"
+export CLASSPATH="/Library/Java/Extensions:/Users/marshallhumble/Library/Java/Extensions:$CLASSPATH"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home"
+export MAVEN_OPTS="-Xmx512m"
+alias datestamp="date +%j%u%H%m%s"
+export PYTHONSTARTUP="$HOME/.pythonstartup"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/marshall/.sdkman"
-[[ -s "/Users/marshall/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/marshall/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="/Users/marshallhumble/.sdkman"
+[[ -s "/Users/marshallhumble/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/marshallhumble/.sdkman/bin/sdkman-init.sh"
+
+export NVM_DIR="/Users/marshallhumble/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
